@@ -1,0 +1,76 @@
+//* Isme ham kaise html me koi fill add or remove krte h wo jaenge ?
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1 Box">box1</div>
+      <div class="box2 Box">box2</div>
+      <div class="box3 Box">box3</div>
+      <div class="box4 Box">box4</div>
+    </div>
+
+    <script>
+      let cont = document.querySelector(".container");
+
+      let div = document.createElement("Div");
+      // className ka use kr sake to
+      div.className = "newdiv";
+      // ya setAttributes ka v use kr sakte ho
+      // div.setAttribute("class","newdiv")
+      div.innerHTML = "<p> Hey Coders </p>";
+      div.style.color = "red";
+      div.style.fontSize = "2rem";
+      cont.append(div); // iska use jab add element ko parent me add krnma h  krna h
+      // cont.replaceWith() // iska use jab add element ko replace krna h
+      // cont.remove(div) // iska use jab add element ka remove krna h
+      // cont.after(div) // iska use jab add element ko parent se bad laha h
+      // cont.before(div) // iska use jab add element ko parent se pahale laha h
+
+      // ===============================================
+      // ===============================================
+      // <== Agger aapko direct add krna ho to kuch feture h ==>
+      // const cont = document.querySelector('.container');
+
+      // 1. Pehle add kare
+      // cont.insertAdjacentHTML('beforebegin', '<p>Before Begin</p>');
+
+      // 2. Andar sabse start me add kare
+      // cont.insertAdjacentHTML('afterbegin', '<p>After Begin</p>');
+
+      // 3. Andar sabse end me add kare
+      // cont.insertAdjacentHTML('beforeend', '<p>Before End</p>');
+
+      // 4. Baad me add kare
+      // cont.insertAdjacentHTML('afterend', '<p>After End</p>');
+
+      // ===============================================
+      // ===============================================
+
+      //*********************************************************
+
+      //*********** <==  Ye Class ke liye h ==> ****************
+
+      // let cont=document.querySelector(".container")
+
+      // Nayi class add karega
+      // cont.classList.add('new-class');
+
+      // Ek class ko remove karega
+      // cont.classList.remove('old-class');
+
+      // Class ko toggle karega
+      // cont.classList.toggle('highlight'); // Add karega agar nahi hai, remove karega agar hai
+
+      // Check karega agar class exist karti hai
+      // console.log(cont.classList.contains('new-class')); // Output: true
+
+      //**********************************************************
+    </script>
+  </body>
+</html>
